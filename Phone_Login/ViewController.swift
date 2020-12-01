@@ -33,6 +33,10 @@ class ViewController: UIViewController {
                         self.verification_id = verificationId
                         self.otp.isHidden = false
                     }
+                    let detail:secondViewController = storyboard.instantiateViewController(withIdentifier: "secondViewController") as! secondViewController
+                    
+                    self.navigationController?.pushViewController(detail, animated: true )
+                    
                 })
                 
             }else{
